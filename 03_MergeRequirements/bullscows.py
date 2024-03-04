@@ -18,7 +18,6 @@ def bullscows(guess: str, secret: str) -> (int, int):
 
 def gameplay(ask: callable, inform: callable, words: list[str]) -> int:
     secret = choice(words)
-    print(secret)
     guess = ''
     attempts = 0
     while guess != secret:
