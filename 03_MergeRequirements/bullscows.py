@@ -15,7 +15,6 @@ def bullscows(guess: str, secret: str) -> (int, int):
 
 def gameplay(ask: callable, inform: callable, words: list[str]) -> int:
     secret = choice(words)
-    print(secret)
     guess = ''
     attempts = 0
     while guess != secret:
@@ -58,6 +57,4 @@ if len(sys.argv) > 2:
     word_length = int(sys.argv[2])
 words = list(filter(lambda x: len(x) == word_length, words))
 print(f"Congratulations! You won after {gameplay(ask, inform, words)} attempts.")
-
-
 
